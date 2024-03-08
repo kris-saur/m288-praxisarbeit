@@ -18,7 +18,7 @@ function start() {
 
 function fill_box(row, length) {
     for (var i = 0; i < length; i++) {
-        document.getElementsByClassName(row.toString())[i].style.backgroundColor = 'firebrick';
+        document.getElementsByClassName(row.toString())[i].style.backgroundColor = '#95c11f';
     }
 }
 
