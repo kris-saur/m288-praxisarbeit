@@ -2,29 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no">
-    <title>Tower Block Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Game</title>
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="game"></div>
-        <div id="score">0</div>
-        <div id="instructions">Klick (oder drucke den Spacebar) um den Block zu platzieren</div>
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>SUPER!</p>
-            <p>Klicke oder druck spacebar und probiere es nochmal</p>
-        </div>
-        <div class="game-ready">
-            <div id="start-button">Start</div>
-            <div></div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="https://codepen.io/steveg3003/pen/zBVakw.js"></script>
+    <h1>Tower Block Game</h1>
+    <div id="box"></div>
+    <button id="start" type="button" onclick="start()">Start</button>
+    <span id="score">Score:- <span id="src">0</span>
     <script src="/assets/script.js"></script>
 </body>
 </html>
