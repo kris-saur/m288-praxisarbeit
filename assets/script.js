@@ -1,4 +1,3 @@
-
 // Aussehen
 
 for (var i=0; i<20; i++) {
@@ -93,7 +92,7 @@ function cutting_extra(block) {
     length = sum;
     if (length != 0) {
         score = score + 10;
-        document.getElementById("scr").innerHTML = score;
+        document.getElementById("score").innerHTML = score;
     } 
     else {
         setTimeout(() => {
