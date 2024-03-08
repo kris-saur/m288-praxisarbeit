@@ -58,7 +58,7 @@ var Stage = /** @class */ (function () {
 }());
 var Block = /** @class */ (function () {
     function Block(block) {
-        // set size and position
+        // grösse und position
         this.STATES = { ACTIVE: 'active', STOPPED: 'stopped', MISSED: 'missed' };
         this.MOVE_AMOUNT = 12;
         this.dimension = { width: 0, height: 0, depth: 0 };
@@ -67,7 +67,7 @@ var Block = /** @class */ (function () {
         this.index = (this.targetBlock ? this.targetBlock.index : 0) + 1;
         this.workingPlane = this.index % 2 ? 'x' : 'z';
         this.workingDimension = this.index % 2 ? 'width' : 'depth';
-        // set the dimensions from the target block, or defaults.
+        // dimension des Ziels
         this.dimension.width = this.targetBlock ? this.targetBlock.dimension.width : 10;
         this.dimension.height = this.targetBlock ? this.targetBlock.dimension.height : 2;
         this.dimension.depth = this.targetBlock ? this.targetBlock.dimension.depth : 10;
@@ -75,7 +75,7 @@ var Block = /** @class */ (function () {
         this.position.y = this.dimension.height * this.index;
         this.position.z = this.targetBlock ? this.targetBlock.position.z : 0;
         this.colorOffset = this.targetBlock ? this.targetBlock.colorOffset : Math.round(Math.random() * 100);
-        // set color
+        // Farbe
         if (!this.targetBlock) {
             this.color = 0x333344;
         }
@@ -88,12 +88,12 @@ var Block = /** @class */ (function () {
         }
         // state
         this.state = this.index > 1 ? this.STATES.ACTIVE : this.STATES.STOPPED;
-        // set direction
+        // Richtung
         this.speed = -0.1 - (this.index * 0.005);
         if (this.speed < -4)
             this.speed = -4;
         this.direction = this.speed;
-        // create block
+        // Block erstellen
         var geometry = new THREE.BoxGeometry(this.dimension.width, this.dimension.height, this.dimension.depth);
         geometry.applyMatrix(new THREE.Matrix4().makeTranslation(this.dimension.width / 2, this.dimension.height / 2, this.dimension.depth / 2));
         this.material = new THREE.MeshToonMaterial({ color: this.color, shading: THREE.FlatShading });
@@ -201,9 +201,6 @@ var Game = /** @class */ (function () {
         });
         document.addEventListener('touchstart', function (e) {
             e.preventDefault();
-            // this.onAction();
-            // ☝️ this triggers after click on android so you
-            // insta-lose, will figure it out later.
         });
     }
     Game.prototype.updateState = function (newState) {
