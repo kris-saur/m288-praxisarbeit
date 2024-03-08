@@ -2,7 +2,7 @@
 
 h1{
     margin-left: 5%;
-    font-size: large;
+    font-size: xx-large;
     margin-top: 0%;
     color: black;
 }
@@ -45,8 +45,8 @@ h1{
 
 #score{
     font-size: larger;
-    position: absolute;
-    top: 12%;
-    left: 2%;
+    text-align: right;
+    top: 0%;
+    left: 10%;
 
 }

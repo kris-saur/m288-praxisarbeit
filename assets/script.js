@@ -30,7 +30,7 @@ function move(row, length, s) {
 
     id = setInterval(() => {
         if (length < 20 && turn == 'forward') {
-            document.getElementsByClassName(row.toString())[length].style.backgroundColor = 'firebrick';
+            document.getElementsByClassName(row.toString())[length].style.backgroundColor = '#95c11f';
             length++;
             document.getElementsByClassName(row.toString())[s].style.backgroundColor = '';
             s++;
@@ -41,7 +41,7 @@ function move(row, length, s) {
             turn = 'backward';
         } 
         else if (length < 20 && turn == 'backward') {
-            document.getElementsByClassName(row.toString())[length].style.backgroundColor = 'firebrick';
+            document.getElementsByClassName(row.toString())[length].style.backgroundColor = '#95c11f';
             length--;
             document.getElementsByClassName(row.toString())[s].style.backgroundColor='';
             s--;
