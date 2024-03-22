@@ -5,15 +5,17 @@ for (var i = 0; i < 20; i++) {
     "<div><div class='1'></div><div class='2'></div><div class='3'></div><div class='4'></div><div class='5'></div><div class='6'></div><div class='7'></div><div class='8'></div><div class='9'></div><div class='10'></div></div>";
 }
 
-var x = 10;
+let running = false;
+var currentRow = 10;
 var length = 10;
 var score = 0;
-var s = 0;
+var animatedBlockStart = 0;
 
 function start() {
-    fill_box(x, length);
-    move(x, length, s);
+    fill_box(currentRow, length);
+    move(currentRow, length, animatedBlockStart);
     document.getElementById("start").removeAttribute("onclick");
+    document.addEventListener("keypress", keyPress);
 }
 
 function fill_box(row, length) {
@@ -23,79 +25,79 @@ function fill_box(row, length) {
 }
 
 // block funktion
-var id;
+var timerid;
 var turn = 'forward';
 
-function move(row, length, s) {
+function move(row, length, animatedBlockStart) {
 
-    id = setInterval(() => {
+    timerId = setInterval(() => {
         if (length < 20 && turn == 'forward') {
             document.getElementsByClassName(row.toString())[length].style.backgroundColor = '#95c11f';
             length++;
-            document.getElementsByClassName(row.toString())[s].style.backgroundColor = '';
-            s++;
+            document.getElementsByClassName(row.toString())[animatedBlockStart].style.backgroundColor = '';
+            animatedBlockStart++;
         }
         else if (length == 20) {
-            length = s - 1
-            s = 19;
+            length = animatedBlockStart - 1
+            animatedBlockStart = 19;
             turn = 'backward';
         }
         else if (length < 20 && turn == 'backward') {
             document.getElementsByClassName(row.toString())[length].style.backgroundColor = '#95c11f';
             length--;
-            document.getElementsByClassName(row.toString())[s].style.backgroundColor = '';
-            s--;
+            document.getElementsByClassName(row.toString())[animatedBlockStart].style.backgroundColor = '';
+            animatedBlockStart--;
             if (length == -1) {
-                length = s + 1;
-                s = 0;
+                length = animatedBlockEnd + 1;
+                animatedBlockStart = 0;
                 turn = 'forward';
             }
         }
     }, 100);
 }
 
-document.addEventListener("keypress", event => {
+const keyPress = event => {
     if (event.key == ' ') {
-        x = x - 1;
-        if (x == 0) {
+        currentRow--;
+        if (currentRow == 0) {
             alert("du hast gewonnen !!");
             window.location.reload();
         }
-        s = 0;
+        animatedBlockStart = 0;
         turn = 'forward';
-        clearInterval(id);
-        cutting_extra(x + 1);
+        clearInterval(timerId);
+        cutting_extra(currentRow + 1);
         start();
     }
-})
+}
 
 function cutting_extra(block) {
-    var sum = 0;
+    var newLength = 0;
     if (block == 10) {
-        sum = 10;
+        newLength = 10;
     }
     else {
         for (var i = 0; i <= 19; i++) {
 
-            elem1 = document.getElementsByClassName(block.toString())[i];
-            elem2 = document.getElementsByClassName((block + 1).toString())[i];
+            currentBlock = document.getElementsByClassName(block.toString())[i];
+            nextBlock = document.getElementsByClassName((block + 1).toString())[i];
 
-            // 
             
-            // if (
-            //     window.getComputedStyle(elem1).getPropertyValue("background-color") != 
-            //     window.getComputedStyle(elem2).getPropertyValue("background-color")) {
-            //     if (window.getComputedStyle(elem2).getPropertyValue("background-color") == 'rgba(0,0,0,0)') {
-            //         elem1.style.backgroundColor = elem2.style.backgroundColor;
-            //     }
-            // }
-            // else {
-            //     if (window.getComputedStyle(elem2).getPropertyValue("background-color") != 'rgba(0,0,0,0)')
-            //         sum++;
-            // }
+            
+            if (
+                window.getComputedStyle(currentBlock).getPropertyValue("background-color") != 
+                window.getComputedStyle(nextBlock).getPropertyValue("background-color")) {
+                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") == 'rgba(0,0,0,0)') {
+                    currentBlock.style.backgroundColor = nextBlock.style.backgroundColor;
+                }
+            }
+            else {
+                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") != 'rgba(0,0,0,0)')
+                    newLength++;
+            }
         }
     }
-    length = sum;
+    length = newLength;
     if (length != 0) {
         score = score + 10;
         document.getElementById("score").innerHTML = score;
@@ -107,4 +109,3 @@ function cutting_extra(block) {
         }, 100);
     }
 }
-//
