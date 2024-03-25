@@ -1,5 +1,5 @@
 // Aussehen
-
+"use strict";
 for (var i = 0; i < 20; i++) {
     document.getElementById("box").innerHTML = document.getElementById("box").innerHTML +
         "<div><div class='1'></div><div class='2'></div><div class='3'></div><div class='4'></div><div class='5'></div><div class='6'></div><div class='7'></div><div class='8'></div><div class='9'></div><div class='10'></div></div>";
@@ -25,7 +25,7 @@ function fill_box(row, length) {
 }
 
 // block funktion
-var timerid;
+var timerId;
 var turn = 'forward';
 
 function move(row, length, animatedBlockStart) {
@@ -81,8 +81,8 @@ function cutting_extra(block) {
     else {
         for (var i = 0; i <= 19; i++) {
 
-            currentBlock = document.getElementsByClassName(block.toString())[i];
-            nextBlock = document.getElementsByClassName((block + 1).toString())[i];
+            let currentBlock = document.getElementsByClassName(block.toString())[i];
+            let nextBlock = document.getElementsByClassName((block + 1).toString())[i];
 
 
 

@@ -1,4 +1,7 @@
-
+@font-face{
+    font-family: Geomanist;
+    src: url(/assets/font/Geomanist-Black#2\ \(1\).otf);
+}
 
 h1{
     margin-left: 5%;
@@ -32,6 +35,7 @@ h1{
 
 #start{
     background-color: #95c11f;
+    font-family: Geomanist;
     font-size: medium;
     font-weight: bold;
     border: solid #95c11f 3px;
