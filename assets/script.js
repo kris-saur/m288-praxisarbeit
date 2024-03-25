@@ -1,8 +1,8 @@
 // Aussehen
 
 for (var i = 0; i < 20; i++) {
-    document.getElementById("box").innerHTML = document.getElementById("box").innerHTML + 
-    "<div><div class='1'></div><div class='2'></div><div class='3'></div><div class='4'></div><div class='5'></div><div class='6'></div><div class='7'></div><div class='8'></div><div class='9'></div><div class='10'></div></div>";
+    document.getElementById("box").innerHTML = document.getElementById("box").innerHTML +
+        "<div><div class='1'></div><div class='2'></div><div class='3'></div><div class='4'></div><div class='5'></div><div class='6'></div><div class='7'></div><div class='8'></div><div class='9'></div><div class='10'></div></div>";
 }
 
 let running = false;
@@ -32,8 +32,10 @@ function move(row, length, animatedBlockStart) {
 
     timerId = setInterval(() => {
         if (length < 20 && turn == 'forward') {
+            // set last block
             document.getElementsByClassName(row.toString())[length].style.backgroundColor = '#95c11f';
             length++;
+            // remove first block
             document.getElementsByClassName(row.toString())[animatedBlockStart].style.backgroundColor = '';
             animatedBlockStart++;
         }
@@ -82,17 +84,17 @@ function cutting_extra(block) {
             currentBlock = document.getElementsByClassName(block.toString())[i];
             nextBlock = document.getElementsByClassName((block + 1).toString())[i];
 
-            
-            
+
+
             if (
-                window.getComputedStyle(currentBlock).getPropertyValue("background-color") != 
+                window.getComputedStyle(currentBlock).getPropertyValue("background-color") !=
                 window.getComputedStyle(nextBlock).getPropertyValue("background-color")) {
-                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") == 'rgba(0,0,0,0)') {
+                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") == 'rgba(0, 0, 0, 0)') {
                     currentBlock.style.backgroundColor = nextBlock.style.backgroundColor;
                 }
             }
             else {
-                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") != 'rgba(0,0,0,0)')
+                if (window.getComputedStyle(nextBlock).getPropertyValue("background-color") != 'rgba(0, 0, 0, 0)')
                     newLength++;
             }
         }
