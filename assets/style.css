@@ -1,10 +1,11 @@
 @font-face{
     font-family: Geomanist;
-    src: url(/assets/font/Geomanist-Black#2\ \(1\).otf);
+    src: url(/assets/font/Geomanist-Black.otf);
 }
 
 h1{
     margin-left: 5%;
+    font-family: Geomanist;
     font-size: xx-large;
     margin-top: 0%;
     color: black;
