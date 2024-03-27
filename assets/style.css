@@ -56,7 +56,6 @@ h1{
 }
 
 #logo{
-    position: fixed;
-    right: 10px;
-    left: 10px;
+    float: right;
+    margin-top: 30px;
 }
