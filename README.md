@@ -26,3 +26,22 @@ Es kammen wenige fortschritte im JavaScript. Wie haben kurz zu CSS gewächselt u
 Wir haben gute Fortschritte mit dem JavaScript-Code gemacht. Der Code ist fertig geschrieben, jetzt müssen wir nur noch die während des Codings aufgetretenen Fehler beheben. Wir haben ein Kommando im Code verwendet, das wir nicht mehr finden können, um das Spiel spielen zu können.
 
 01.03.2024
+In dieser Stunde haben wir versucht, das Problem vom letzten Mal zu lösen, das nicht funktioniert hat. Um 11:25 haben wir eine Sprechstunde mit LB um das Problem zu lösen und unseren Stand zu zeigen. In der Sprechstunde haben wir das Problem mit dem Start des Spiels gelöst und die weiteren Schritte besprochen.
+
+08.03.2024
+Wir haben um 11.39 Uhr eine Beratung mit LB vereinbart. Bis dahin haben wir die Formatierung der Texte geändert und die Webseite SBW-ähnlich gemacht. Der Font-face code hat nicht reagiert, das wollen wir noch verbessern. Das Spiel funktioniert teilweise. Die Blöcke schneiden sich nicht dort, wo sie sollten (also eigentlich gar nicht) und jeder Block ist unterschiedlich lang. In der Besprechung wird das Problem besprochen und uns erklärt, wie wir weiter vorgehen sollen.
+
+15.03.2024
+Um 10.27 Uhr haben wir einen Termin mit dem LB. Bis dahin versuchen wir das Problem selbst zu lösen. Wir schauen, ob der Code in JavaScript richtig ist und ob wir selbst etwas verbessern können. In der Besprechung haben wir uns das Cutting nochmal angeschaut und versucht die Fehler auf Debug zu finden.
+
+22.03.2024
+In dieser Woche (ausserhalb des Unterrichts) haben wir uns mit dem LB zusammengesetzt, um das Problem zu lösen. Nach einer langen Durchsicht des Codes hatte der Code bessere (klarere) Definitionsnamen. Aber das Problem war noch nicht gelöst.
+
+25.03.2024
+Das Problem wurde gelöst und das Spiel funktioniert endlich. (Vielen Dank Joki!! Sonst wären wir immer noch am verzweifeln TT) Nach Rücksprache wurde das Problem mit dem Font-Face gefunden und auch gelöst. 
+
+27.03.2024
+Alles überprüft, ob etwas fehlt. Logo hinzugefügt und oben rechts platziert.
+
+
+**Testprotokoll**
