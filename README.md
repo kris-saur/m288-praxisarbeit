@@ -1,6 +1,6 @@
 # m288-praxisarbeit
 
-**Dokumentation **
+**Dokumentation**
 
 12.01.2024
 Wir haben nach Inspiration und Ideen gesucht, um herauszufinden, welches Spiel wir entwickeln möchten.
@@ -45,3 +45,18 @@ Alles überprüft, ob etwas fehlt. Logo hinzugefügt und oben rechts platziert.
 
 
 **Testprotokoll**
+
+HTML Test
+<img src="/assets/img/testprotokoll/Html.png" alt text="Ein Problem mit dem Abstand in dem Logo Namen" title="HTML Test">
+
+CSS Test
+<img src="/assets/img/testprotokoll/css.png" alt text="Fehlerfreier Code" title="CSS Test">
+
+Javascript Test 1
+<img src="/assets/img/testprotokoll/Testprotokoll 01.png" alt text="Drei Fehlermeldung" titel="Test 01 Javascript">
+
+Javascript Test 2
+<img src="/assets/img/testprotokoll/Testprotokoll 02.png" alt text="Fehler Korrigiert" titel=" Test 02 Javascript">
+
+Javascript Test 3
+<img src="/assets/img/testprotokoll/Testprotokoll 03.png" alt text="Wieder Fehler frei" titel="Test 03 Javascript">
